@@ -24,9 +24,21 @@ const SnippetContainer = styled.div`
     font-size: 18px;
     margin-bottom: 1.4rem;
   }
+
   .pagination{
     display: flex;
     justify-content:center;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    h1 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    h5 {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -35,6 +47,10 @@ const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
 `;
 
 const PageButton = styled.button`
@@ -46,6 +62,11 @@ const PageButton = styled.button`
   border-radius: 4px;
   cursor:pointer;
   font-weight: bolder;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 `;
 
 const Snippet = ({ repositories }) => {
